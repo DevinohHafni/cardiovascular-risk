@@ -1,9 +1,10 @@
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
-from backbone import get_backbone
-from multitask_head import MultiTaskHead
+from models.backbone import get_backbone
+from models.multitask_head import MultiTaskHead
 from dataset import NailDataset
+from sklearn.metrics import f1_score
 
 dataset = NailDataset("data/raw")
 
