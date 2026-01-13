@@ -3,6 +3,10 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 from backbone import get_backbone
 from multitask_head import MultiTaskHead
+from dataset import NailDataset
+
+dataset = NailDataset("data/raw")
+
 
 # losses
 color_loss_fn = nn.CrossEntropyLoss()
